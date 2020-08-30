@@ -33,6 +33,7 @@
 \usepackage{geometry}
 	\textheight=700px                    % Saving trees ;-)
 \usepackage{url}
+\usepackage{hyperref}
 
 \frenchspacing              % Better looking spacings after periods
 \pagestyle{empty}           % No pagenumbers/headers/footers
@@ -84,7 +85,7 @@
 
 \newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
 		\noindent \textbf{#1} \hfill      % Jobname
-		\colorbox{Black}{\color{White}#2} \par  % Duration
+		\colorbox{Blue}{\color{White}#2} \par  % Duration
 		\noindent \textit{#3} \par              % Company
 		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
 		\normalsize \par}
@@ -106,19 +107,16 @@
 %%% ------------------------------------------------------------
 \NewPart{Personal details}{}
 
-\PersonalEntry{Location}{St. Petersburg}
+\PersonalEntry{Location}{St. Petersburg, Russia}
 \PersonalEntry{Birth}{August 28, 2000}
 \PersonalEntry{Phone}{+7(951)124-98-32}
-\PersonalEntry{Mail}{\url{avangard4700@mail.ru}}
+\PersonalEntry{E-Mail}{\url{avangard4700@mail.ru}}
 
 %%% Education
 %%% ------------------------------------------------------------
 \NewPart{Education}{}
 
-\EducationEntry{High school}{2016-2018}{Lyceum 97, Chelyabinsk}{Information technology and math specialty}
-\sepspace
-
-\EducationEntry{Baccalaureate}{2018-2022}{ITMO University, St. Petersburg}{Faculty of Information Technology and Programming \\ Department of Computer Technology \\ Group M3238}
+\EducationEntry{Baccalaureate}{2018-2022}{ITMO University, St. Petersburg, Russia}{Computer science}
 \sepspace
 
 %%% Work experience
@@ -127,11 +125,14 @@
 
 \EducationEntry{Software engineer intern}{Summer 2019}{Yandex, Full-time}{Backend developer in Team of facts and snippets. C++/Python}
 
-%%% Other experience
+%%% Additional education
 %%% ------------------------------------------------------------
-\NewPart{Other experience}{}
+\NewPart{Additional education}{}
 
-\EducationEntry{Summer Computer School pupil}{2016-2017}{\url{https://lksh.ru/} }{Studying algorithms and data structures}
+\EducationEntry{Summer Computer School}{2016-2017}{\href{https://lksh.ru/}{lksh.ru} }{Studying algorithms and data structures}
+\sepspace
+
+\EducationEntry{Moscow Workshops Juniors}{2017}{MIPT training camp}{Preparing for competitive programming olympiads}
 \sepspace
 
 \EducationEntry{IT Samsung school}{2015-2016}{Mobile applications development}{Studying Java, work with Android Studio}
@@ -140,35 +141,54 @@
 %%% ------------------------------------------------------------
 \NewPart{Skills}{}
 
-\SkillsEntry{Programming Languages}{C++, Java, Python(basic)}
+\SkillsEntry{Programming Languages}{Java, C++, Python(basic)}
 \sepspace
 
 \SkillsEntry{Technical skills}{Algorithms and Data Structures}
 \SkillsEntry{}{Basic web-programming}
+\SkillsEntry{}{Basic mobile app development}
 \SkillsEntry{}{Experience with frameworks (Spring, Vue.js)}
 \sepspace
 
 \SkillsEntry{Languages}{Russian (mother tongue), English (B2)}
 \sepspace
 
+%%% Projects
+%%% ------------------------------------------------------------
+\NewPart{Projects}{}
+
+\WorkEntry{Huffman compressor}{\href{https://github.com/Darui99/ITMO-CPP/tree/master/Huffman}{source link}}{Compress and decompress files using Huffman's algorithm.}{C++}
+\sepspace
+
+\WorkEntry{Process manager}{\href{https://github.com/Darui99/ITMO-OS/tree/master/HW4 (alternative)}{source link}}{Script for tracking and managing processes on linux}{Bash}
+\sepspace
+
+\WorkEntry{Tournament bot}{\href{https://github.com/Alexvsalexvsalex/telegram-game-bot}{source link}}{Mini Telegram-bot for playing interactive emojis with friends}{Python}
+\sepspace
+
+%%% Achievements
 %%% ------------------------------------------------------------
 \NewPart{Achievements}{}
 
-\EducationEntry{Northern Eurasia Finals}{2019/20}{Third degree diploma (60th place)}
+\EducationEntry{Northern Eurasia Finals}{2019/20}{Third degree diploma}{$60^{th}$ place}
 \sepspace
 
-\EducationEntry{Moscow Open Olympiad in informatics}{2017/18}{Third degree diploma}
+\EducationEntry{Moscow Open Olympiad in informatics}{2017/18}{Third degree diploma}{$66^{th}$ place out of 2000+}
 \sepspace
 
-\EducationEntry{Individual Olympiad in informatics}{2017/18}{First degree diploma}
+\EducationEntry{Individual Olympiad in informatics}{2017/18}{First degree diploma}{$19^{th}$ place out of 350+ (excluding non-qualified participants)}
 \sepspace
 
+%%% Additional information
 %%% ------------------------------------------------------------
 \NewPart{Additional information}{}
 
-\SkillsEntry{GitHub}{@Darui99}
+\SkillsEntry{GitHub}{\href{https://github.com/Darui99}{https://github.com/Darui99} }
 \sepspace
 
-\SkillsEntry{Codeforces}{@Darui99}
+\SkillsEntry{Codeforces}{\href{https://codeforces.com/profile/Darui99}{https://codeforces.com/profile/Darui99} }
+\sepspace
+
+\SkillsEntry{Telegram}{\href{https://t.me/Darui99}{https://t.me/Darui99} }
 
 \end{document}
