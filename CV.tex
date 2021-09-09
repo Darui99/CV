@@ -1,197 +1,130 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% LaTeX Template: Curriculum Vitae
-%
-% Source: http://www.howtotex.com/
-% Feel free to distribute this template, but please keep the
-% referal to HowToTeX.com.
-% Date: July 2011
-% 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% How to use writeLaTeX: 
-%
-% You edit the source code here on the left, and the preview on the
-% right shows you the result within a few seconds.
-%
-% Bookmark this page and share the URL with your co-authors. They can
-% edit at the same time!
-%
-% You can upload figures, bibliographies, custom classes and
-% styles using the files menu.
-%
-% If you're new to LaTeX, the wikibook is a great place to start:
-% http://en.wikibooks.org/wiki/LaTeX
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\documentclass[paper=a4,fontsize=11pt]{scrartcl} % KOMA-article class
-							
-\usepackage[english]{babel}
-\usepackage[utf8x]{inputenc}
-\usepackage[protrusion=true,expansion=true]{microtype}
-\usepackage{amsmath,amsfonts,amsthm}     % Math packages
-\usepackage{graphicx}                    % Enable pdflatex
-\usepackage[svgnames]{xcolor}            % Colors by their 'svgnames'
-\usepackage{geometry}
-	\textheight=700px                    % Saving trees ;-)
-\usepackage{url}
-\usepackage{hyperref}
+\documentclass{resume} % Use the custom resume.cls style
 
-\frenchspacing              % Better looking spacings after periods
-\pagestyle{empty}           % No pagenumbers/headers/footers
+\usepackage[left=0.4 in,top=0.4in,right=0.4 in,bottom=0.4in]{geometry} % Document margins
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}} 
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\hypersetup{
+    colorlinks=true,
+    urlcolor=blue,
+    linkcolor=black}
 
-%%% Custom sectioning (sectsty package)
-%%% ------------------------------------------------------------
-\usepackage{sectsty}
+\name{Egor Kurbatov} % Your name
+% You can merge both of these into a single line, if you do not have a website.
+\address{+7 (951) 124-9832 \\ St. Petersburg, Russia} 
+\address{\href{mailto:avangard4700@mail.ru}{avangard4700@mail.ru} \\ \href{https://www.linkedin.com/in/egor-kurbatov/}{linkedin.com/in/egor-kurbatov/} \\ \href{https://t.me/Darui99}{t.me/Darui99}}  %
 
-\sectionfont{%			            % Change font of \section command
-	\usefont{OT1}{phv}{b}{n}%		% bch-b-n: CharterBT-Bold font
-	\sectionrule{0pt}{0pt}{-5pt}{3pt}}
-
-%%% Macros
-%%% ------------------------------------------------------------
-\newlength{\spacebox}
-\settowidth{\spacebox}{8888888888}			% Box to align text
-\newcommand{\sepspace}{\vspace*{1em}}		% Vertical space macro
-
-\newcommand{\MyName}[1]{ % Name
-		\Huge \usefont{OT1}{phv}{b}{n} \hfill #1
-		\par \normalsize \normalfont}
-		
-\newcommand{\MySlogan}[1]{ % Slogan (optional)
-		\large \usefont{OT1}{phv}{m}{n}\hfill \textit{#1}
-		\par \normalsize \normalfont}
-
-\newcommand{\NewPart}[1]{\section*{\uppercase{#1}}}
-
-\newcommand{\PersonalEntry}[2]{
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}		       % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value
-
-\newcommand{\SkillsEntry}[2]{      % Same as \PersonalEntry
-		\noindent\hangindent=2em\hangafter=0 % Indentation
-		\parbox{\spacebox}{        % Box to align text
-		\textit{#1}}			   % Entry name (birth, address, etc.)
-		\hspace{1.5em} #2 \par}    % Entry value	
-		
-\newcommand{\EducationEntry}[4]{
-		\noindent \textbf{#1} \hfill      % Study
-		\colorbox{Black}{%
-			\parbox{6em}{%
-			\hfill\color{White}#2}} \par  % Duration
-		\noindent \textit{#3} \par        % School
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par}
-
-\newcommand{\WorkEntry}[4]{				  % Same as \EducationEntry
-		\noindent \textbf{#1} \hfill      % Jobname
-		\colorbox{Blue}{\color{White}#2} \par  % Duration
-		\noindent \textit{#3} \par              % Company
-		\noindent\hangindent=2em\hangafter=0 \small #4 % Description
-		\normalsize \par}
-
-%%% Begin Document
-%%% ------------------------------------------------------------
 \begin{document}
-% you can upload a photo and include it here...
-%\begin{wrapfigure}{l}{0.5\textwidth}
-%	\vspace*{-2em}
-%		\includegraphics[width=0.15\textwidth]{photo}
-%\end{wrapfigure}
 
-\MyName{Egor Kurbatov}
+%----------------------------------------------------------------------------------------
+%	EDUCATION SECTION
+%----------------------------------------------------------------------------------------
 
-\sepspace
+\begin{rSection}{Education}
 
-%%% Personal details
-%%% ------------------------------------------------------------
-\NewPart{Personal details}{}
+{\bf Bachelor of Computer Science}, ITMO University \hfill {Sep. 2018 - Aug. 2022}
 
-\PersonalEntry{Location}{St. Petersburg, Russia}
-\PersonalEntry{Birth}{August 28, 2000}
-\PersonalEntry{Phone}{+7(951)124-98-32}
-\PersonalEntry{E-Mail}{\url{avangard4700@mail.ru}}
+{\bf Moscow Workshops Juniors} \hfill {Feb. 2017}\\
+Competitive programming bootcamp
 
-%%% Education
-%%% ------------------------------------------------------------
-\NewPart{Education}{}
+{\bf Summer Informatics School} \hfill {Summer 2016, Summer 2017}\\
+Algorithms and Data Structures
 
-\EducationEntry{Baccalaureate}{2018-2022}{ITMO University, St. Petersburg, Russia}{Computer science}
-\sepspace
+{\bf IT Samsung school} \hfill {Sep. 2015 - May 2016}\\
+Android software development
+%Minor in Linguistics \smallskip \\
+%Member of Eta Kappa Nu \\
+%Member of Upsilon Pi Epsilon \\
 
-%%% Work experience
-%%% ------------------------------------------------------------
-\NewPart{Work experience}{}
 
-\EducationEntry{Software engineer intern}{Summer 2019}{Yandex, Full-time}{Backend developer in Team of facts and snippets. C++/Python}
+\end{rSection}
 
-%%% Additional education
-%%% ------------------------------------------------------------
-\NewPart{Additional education}{}
+%----------------------------------------------------------------------------------------
+%	WORK EXPERIENCE SECTION
+%----------------------------------------------------------------------------------------
 
-\EducationEntry{Summer Computer School}{2016-2017}{\href{https://lksh.ru/}{lksh.ru} }{Studying algorithms and data structures}
-\sepspace
+\begin{rSection}{EXPERIENCE}
 
-\EducationEntry{Moscow Workshops Juniors}{2017}{MIPT training camp}{Preparing for competitive programming olympiads}
-\sepspace
+\textbf{Software Engineer Intern} \hfill Jul. 2021 - Aug. 2021\\
+JetBrains \hfill \textit{St. Petersburg, Russia}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Backend developer in Qodana. Kotlin/Java.
+ \end{itemize}
+ 
+\textbf{Software Engineer Intern} \hfill Jul. 2019 - Sep. 2019\\
+Yandex \hfill \textit{St. Petersburg, Russia}
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Backend developer in team of facts and snippets. C++/Python.
+ \end{itemize}
 
-\EducationEntry{IT Samsung school}{2015-2016}{Mobile applications development}{Studying Java, Android Studio}
+\end{rSection} 
 
-%%% Skills
-%%% ------------------------------------------------------------
-\NewPart{Skills}{}
+%----------------------------------------------------------------------------------------
+%	PROJECTS SECTION
+%----------------------------------------------------------------------------------------
 
-\SkillsEntry{Programming Languages}{Java, C++, Python}
-\sepspace
+\begin{rSection}{PROJECTS}
+\vspace{-1.25em}
+\item 
+\textbf{Fast hash-based additive accumulators} \hfill \href{https://github.com/Darui99/AdditiveAccumulator}{source link}\\
+Cryptographic accumulators. Based on \href{https://github.com/bigspider/accumulator/blob/master/docs/paper-draft.pdf}{this} article.
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item C++
+ \end{itemize}
+ 
+\item 
+\textbf{Markdown contents generator} \hfill \href{https://github.com/Darui99/markdown-contents-generator}{source link}\\
+Takes markdown file and generates its table of contents.
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Java
+ \end{itemize}
 
-\SkillsEntry{Technical skills}{Algorithms and Data Structures}
-\SkillsEntry{}{Basic web-programming}
-\SkillsEntry{}{Basic mobile app development}
-\SkillsEntry{}{Experience with frameworks (Spring, Vue.js)}
-\sepspace
+\item 
+\textbf{Tournament bot} \hfill \href{https://github.com/Darui99/telegram-game-bot}{source link}\\
+Mini Telegram-bot for playing interactive emojis with friends.
+ \begin{itemize}
+    \itemsep -3pt {} 
+     \item Python
+ \end{itemize}
+ 
+\end{rSection} 
 
-\SkillsEntry{Languages}{Russian (native), English (B2)}
-\sepspace
+%----------------------------------------------------------------------------------------
+% ACHIEVEMENTS SECTION	
+%----------------------------------------------------------------------------------------
 
-%%% Projects
-%%% ------------------------------------------------------------
-\NewPart{Projects}{}
+\begin{rSection}{ACHIEVEMENTS} 
 
-\WorkEntry{Huffman compressor}{\href{https://github.com/Darui99/ITMO-CPP/tree/master/Huffman}{source link}}{Compress and decompress files using Huffman's algorithm.}{C++}
-\sepspace
+{\bf Northern Eurasia Finals (ICPC semifinal)} \hfill {2019/20}\\
+$60^{th}$ place. Third-degree diploma.
 
-\WorkEntry{Fast hash-based additive accumulators}{\href{https://github.com/IvanMaslov/AdditiveAccumulator}{source link}}{Cryptographic accumulators. Based on \href{https://github.com/bigspider/accumulator/blob/master/docs/paper-draft.pdf}{this} article}{C++}
-\sepspace
+{\bf Moscow Open Olympiad in informatics} \hfill {2017/18}\\
+$66^{th}$ place out of 2000+. Third-degree diploma.
 
-\WorkEntry{Process manager}{\href{https://github.com/Darui99/ITMO-OS/tree/master/HW4 (alternative)}{source link}}{Script for tracking and managing processes on linux}{Bash}
-\sepspace
+{\bf Individual Olympiad in informatics} \hfill {2017/18}\\
+$19^{th}$ place out of 1000+. First-degree diploma.
 
-\WorkEntry{Tournament bot}{\href{https://github.com/Alexvsalexvsalex/telegram-game-bot}{source link}}{Mini Telegram-bot for playing interactive emojis with friends}{Python}
-\sepspace
 
-%%% Achievements
-%%% ------------------------------------------------------------
-\NewPart{Achievements}{}
+\end{rSection}
 
-\EducationEntry{Northern Eurasia Finals}{2019/20}{Third degree diploma}{$60^{th}$ place}
-\sepspace
+%----------------------------------------------------------------------------------------
+% TECHNICAL STRENGTHS	
+%----------------------------------------------------------------------------------------
+\begin{rSection}{SKILLS}
 
-\EducationEntry{Moscow Open Olympiad in informatics}{2017/18}{Third degree diploma}{$66^{th}$ place out of 2000+}
-\sepspace
+\begin{tabular}{ @{} >{\bfseries}l @{\hspace{6ex}} l @{\hspace{6ex}} l}
 
-\EducationEntry{Individual Olympiad in informatics}{2017/18}{First degree diploma}{$19^{th}$ place out of 1000+}
-\sepspace
+{\bf Languages:} & Java & {\bf familiar:} C++, Kotlin, Python, Haskell, Matlab \\
+{\bf Technologies:} & Bash, Git, JUnit & {\bf familiar:} SQL, Spring, Vue.js \\
+{\bf Knowledge:} & Algorithms, Data Structures & {\bf familiar:} Concurrent Computing, Distributed Systems
 
-%%% Additional information
-%%% ------------------------------------------------------------
-\NewPart{Additional information}{}
+\end{tabular}
 
-\SkillsEntry{GitHub}{\href{https://github.com/Darui99}{https://github.com/Darui99} }
-\sepspace
+\end{rSection}
 
-\SkillsEntry{Codeforces}{\href{https://codeforces.com/profile/Darui99}{https://codeforces.com/profile/Darui99} }
-\sepspace
-
-\SkillsEntry{Telegram}{\href{https://t.me/Darui99}{https://t.me/Darui99} }
+%----------------------------------------------------------------------------------------
 
 \end{document}
